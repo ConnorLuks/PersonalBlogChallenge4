@@ -1,0 +1,32 @@
+#username{ /*name of the person submitting the blog post */
+    display:block;
+    width:100%;
+    margin-top:9px;
+    border-radius: 8px;
+}
+
+#title{ /*title box info */
+    display:block;
+    width:100%;
+    margin-top:9px;
+    border-radius: 8px;
+}
+
+#content{ /*css and placement for the comment box */
+    display:block;
+    min-height:100px;
+    width:100%;
+    margin-top:9px;
+    border-radius: 8px;
+}
+
+#submit{ /*css for the submit box */
+    display:block;
+    min-height:30px;
+    text-align:center;
+    width:102%;
+    background-color:#ee8f23;
+    color:black;
+    border-radius: 8px;
+    cursor:pointer;
+}

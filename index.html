@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Blog Main Page</title>
+        <link rel = "stylesheet" href="./assets/css/style.css"/>
+        <link rel = "stylesheet" href="./assets/css/form.css"/>
+    </head>
+    <body>
+        <header>
+            <h2>My Personal Blog Site</h2>
+        </header>
+        <main>
+            <section id="leftsection">
+                <img src="./assets/css/images/blogbackground.png" alt="Blog Image">
+            </section>
+            <section id="rightsection">
+                <form>
+                    <h3>What's currently on your mind?</h3>
+                    <br>
+                    <ul>
+                        <li>
+                            <label for="username">Name:</label>
+                            <textarea id="username"></textarea>
+                        </li>
+                        <li>
+                            <label for="title">Title of post:</label>
+                            <textarea id="title"></textarea>
+                        </li>
+                        <li>
+                            <label for="content">Comment:</label>
+                            <textarea id="content"></textarea>
+                        </li>
+                        <li>
+                            <button id="submit">Submit</button>
+                        </li>
+                </form>
+            </section>
+        <script src="\js\form.js"></script>
+        </main>
+
+    </body>
+
+</html>
+
+<!-- <input type="text" id = "username/title/content"> works as well instead of <textarea id="username/title/content"></textarea>. 
+however <textarea> allows for the box to reshapen in browser by the user.
+logically the prior makes more sense due to keeping the webpage uniform, 
+but I enjoy the ability to stretch the box around, for a real multiple user site i'd go with stationary instead.-->

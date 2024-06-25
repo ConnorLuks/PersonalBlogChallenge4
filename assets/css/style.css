@@ -1,0 +1,56 @@
+header{ /* title structure */
+    height:3.5vw;
+    width:100%;
+    border-width: thick;
+    border-bottom-style: double;
+}
+
+h2{ /* blog title text format */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(211, 139, 56);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+#rightsection{ /* sets the middle bar placement */
+    width:80%;
+}
+
+#leftsection{ /* sets the length of the double bar */
+    width:64%;
+    border-width:thick;
+    border-right-style:double;
+    height:44vw;
+}
+
+img{ /* Blog image details */
+    height:630px;
+    width:700px;
+    object-fit: contain;
+}
+
+form{ /* sets the width of the boxs */
+    padding:60px;
+}
+
+h3{ /* What's currently on your mind? = structure */
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+}
+
+ul{
+    list-style: none; /* prevents list periods or being numbered, interchangeable if desired just comment out */
+}
+
+li{ /* space between the text boxes */
+    padding-bottom:30px;
+}
+
+label{ /* changes font size and weight for the titles of the boxes */
+    font-size: large;
+    font-weight: bold;
+}
