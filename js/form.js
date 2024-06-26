@@ -1,44 +1,34 @@
-// Get references to form elements and button 
+const username=document.getElementById('username');
+const title=document.getElementById('title');
+const comment=document.getElementById('comment');
+const submit=document.getElementById('submit');
 
-const username = document.getElementById('username');
-const title = document.getElementById('title');
-const content =  document.getElementById('content');
-const submit =  document.getElementById('submit');
-
-// Alert user if form fields are blank
-function alertUser(){
-        window.alert('Please complete the form')
+function alertUser(){window.alert('Please fill out all required 3 fields') /* output to user if a box is not filled out */
 }
 
 submit.addEventListener('click', function (event) {
     event.preventDefault();
-    if(username.value === ''|| title.value === '' || content.value ===''){
+    if(username.value === ''|| title.value === '' || comment.value ===''){
         alertUser();
+        
     }else{
         const blogPost = {
             username:username.value,
             title:title.value,
-            content:content.value}
-            // Check if Array already exists in localStorage
+            comment:comment.value}
             const blogPostsArray = JSON.parse(localStorage.getItem('blogPosts'));
-            //If array exists push object to Array
             if(blogPostsArray !== null){
                 blogPosts = blogPostsArray;
                 blogPosts.push(blogPost);
-                // stringify array JSON object and store in localStorage
-                localStorage.setItem('blogPosts',JSON.stringify(blogPosts));
-                //redirect to blog posts
-                location.href="blog.html";
+                localStorage.setItem('blogPosts',JSON.stringify(blogPosts)); /* strings the blog post to local storage */
+                location.href="blog.html"; /* page direct to collective blog, after all 3 boxes are filled out */
             }
-            //Else instantiate array and push the blogPost
+
             else{
                 let blogPosts = [];
                 blogPosts.push(blogPost);
-                // stringify array JSON object and store in localStorage
-                localStorage.setItem('blogPosts',JSON.stringify(blogPosts));
-                //redirect to blog posts
-                location.href="blog.html";
+                localStorage.setItem('blogPosts',JSON.stringify(blogPosts)); /* strings the blog post to local storage */
+                location.href="blog.html"; /* page redirect to collective blog, after all 3 boxes are filled out */
             }
-
 
         }})

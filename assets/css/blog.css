@@ -9,163 +9,143 @@
     border-color:var(--lightcolor);
 }
 
-nav ul{ /* sets the structure of the nav , the return button */
+nav ul{ /* sets the structure of the nav, the return button */
     display:flex;
-    justify-content: space-around;
-    float: right;
+    justify-content:space-around;
+    float:right;
 }
 
-li{
-    margin-right: 5px;
-    padding-bottom:3px;
-    font-size:small;
-    font-weight: bold;
+li{ /* layout of the footer area personal info */
+    margin-right:6px; /* effects the placement of the light to dark slider, keep approx this size if changes are made to prevent overlap on the scroll bar */
+    margin-left:10px;
+    padding-bottom:8px; /* larger than 10px causes right of the text comment box to shrink from the right, do not alter this past 9px */
+    font-size:large;
+    font-weight:bold;
 }
 
-span{
-    font-weight: lighter;
-}
-
-#back{
-    border-radius: 5px;
+#back{ /* return button layout */
+    border-radius: 50px;
     background-color:var(--darkcolor);
     color:var(--lightcolor);
     cursor:pointer;
 }
 
-label{
-    width:35px;
+label{ /* light to dark mode button layout and visuals */
+    width:30px;
     height:20px;
     position:relative;
     display:block;
     background:var(--lightcolor);
     border-radius:20px;
-    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px,-5px,15px rgba(255,255,255,0.4);
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.904), inset 0px,-5px,15px rgba(255, 255, 255, 0.445);
     cursor:pointer;
-    transition:0.3s;
-    padding-left:2px;
+    transition:0.9s;
+    padding-left:8px;
 }
 
-label:after{
-    content:"";
-    width:19px;
-    height:19px;
+label:after{ /* layout of the light to dark mode slider, and color of the circle */
+    content:""; /* required even if blank for the orange slider icon to be seen, slider can be labeled within "" if needed */
+    width:20px;
+    height:20px;
     position:absolute;
-    top:1px;
-    left:1px;
-    background:linear-gradient(180deg,#ffcc89,#d8860b);
+    top:0px;
+    left:0px;
+    background:linear-gradient(180deg,#ffcc89f6,#f1880f);
     border-radius:15px;
-    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.840);
     transition:0.3s;
 }
 
-input {
-    width:0;
-    height:0;
+input{ /* check mark hidden under the slider removing leaves box with check visible if desired */
+    width:0px;
+    height:0px;
     visibility:hidden;
     display:none;
 }
 
-input:checked + label{
+input:checked + label{ /* functionality for the dark mode slider, do not change anything here, or the slider will bug out */
     background: var(--darkcolor);
 }
 
-input:checked + label:after{
+input:checked + label:after{ /* the relative postition of the orange switch on the light and dark slider, and it's color when on dark mode */
     left:35px;
     transform:translateX(-100%);
-    background: linear-gradient(180deg, #777,#3a3a3a);
+    background: linear-gradient(180deg,#ffcc89f6,#f1880f);
 }
 
-#blogcontainer{
+#blogcontainer{ /* overall blog post box structure */
     display:flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    flex-wrap:nowrap;
+    flex-direction:column;
 }
 
-#blogpost{
-    height:110px;
-    width:95%;
-    margin-top:8px;
+#blogpost{ /* sets the size of the blog post boxes */
+    height:120px;
+    width:99%;
+    margin-top:15px;
     border:solid;
     border-color:var(--darkcolor);
     border-radius:8px;
 }
 
-#blogtitle{
+#blogtitle{ /* sets size of the title of the blog post */
     padding:2px;
-    font-size: small;
+    font-size: medium;
     font-weight: bold;
 }
 
-#blogcontent{
+#blogcomment{ /* sets the size of the blog post individual box comments content */
     height:80px;
-    width:90%;
+    width:99%;
     border-top:solid;
     border-top-color:var(--darkcolor);
     margin:0px;
     text-wrap: wrap;
 }
 
-#blogauthor{
+#blogauthor{ /* sets the size and placement of the Posted by user: section */
     float:left;
-    margin:-5px;
+    margin:-8px;
     padding-left:10px;
-    font-size: smaller;
+    font-size: medium;
+    font-weight: bold;
 }
 
-/* styles to apply for dark mode */
-.dark #blogpost{
-    height:110px;
-    width:95%;
-    margin-top:8px;
+.dark #blogpost{ /* styles that only apply to dark mode, code is same as light mode */
+    height:120px;
+    width:99%;
+    margin-top:15px;
     border:solid;
     border-color:var(--lightcolor);
     border-radius:8px;
 }
 
-/* styles to apply for dark mode */
-
-.dark #blogtitle{
+.dark #blogtitle{ /* styles that only apply to dark mode, code is same as light mode */
     padding:2px;
-    font-size: small;
+    font-size: medium;
     font-weight: bold;
 }
 
-/* styles to apply for dark mode */
-
-.dark #blogcontent{
+.dark #blogcomment{ /* styles that only apply to dark mode, code is same as light mode */
     height:80px;
-    width:90%;
+    width:99%;
     border-top:solid;
     border-top-color: var(--lightcolor);
     margin:0px;
     text-wrap: wrap;
 }
 
-/* styles to apply for dark mode */
-
-.dark #blogauthor{
+.dark #blogauthor{ /* styles that only apply to dark mode, code is same as light mode */
     float:left;
-    margin:-5px;
+    margin:-8px;
     padding-left:10px;
-    font-size: smaller;
+    font-size: medium;
     color:var(--lightcolor);
 }
 
-footer{
-    padding-top:10px;
+footer{ /* double bar space after bottom blog post box, before the personal info section */
+    padding-top:20px;
     width:100%;
-    border-width: thick;
-    border-bottom-style: double;
-}
-
-h5{
-    text-align:center;
-    margin-top:5px;
-    margin-bottom:2px;
-}
-
-#nolist{
-    display:block;
-    list-style: none;
+    border-width:thick;
+    border-bottom-style:double;
 }

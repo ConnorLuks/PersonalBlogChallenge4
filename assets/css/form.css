@@ -12,7 +12,7 @@
     border-radius: 8px;
 }
 
-#content{ /*css and placement for the comment box */
+#comment{ /*css and placement for the comment box */
     display:block;
     min-height:100px;
     width:100%;
@@ -25,7 +25,7 @@
     min-height:30px;
     text-align:center;
     width:102%;
-    background-color:#ee8f23;
+    background-color:#ee8f20;
     color:black;
     border-radius: 8px;
     cursor:pointer;

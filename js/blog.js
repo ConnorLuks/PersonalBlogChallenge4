@@ -1,29 +1,24 @@
-const backButton = document.getElementById('back');
-const container = document.querySelector('.container');
-const toggleButton = document.getElementById('darklightmode-toggle');
+const backButton = document.getElementById('back'); /* return button doc */
+const container = document.querySelector('.container'); /* slider button doc */
+const toggleButton = document.getElementById('darklightmode-toggle');  /* as with the others links back to blog.html */
 
-// navigate back to form on click of back button
-backButton.addEventListener('click',function (event) {
+backButton.addEventListener('click',function (event) { /* returns to blog entry main page */
     event.preventDefault();
-    // set location back to form
-    location.href = "index.html";
+    location.href = "index.html"; 
+
 });
 
-// set default mode to light
+let mode = 'light'; /* automatically set to light mode, made attempts to reverse but online references provided conflicting code examples, I stuck with this method. Do Not Alter. */
 
-let mode = 'light';
+toggleButton.addEventListener('click', function(event) { /* when slider is clicked, the following occurs */
 
-// listen for click event on toggle button
-toggleButton.addEventListener('click', function(event) {
-
-    // If mode is light apply dark background and styles by setting class attribute
-    if(mode==='light'){
-        mode = 'dark';
+    if(mode==='light'){ /* transitions to dark mode and follows dark modes css */
+        mode='dark';
         container.setAttribute('class','dark');
     }
-    // Else apply light background and styles by removing class attribute
+
     else{
-        mode = 'light';
+        mode='light';
         container.removeAttribute('class','dark');
     }
 
