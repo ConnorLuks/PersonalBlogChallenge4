@@ -32,13 +32,13 @@ http://127.0.0.1:5500/blog.html
 
 ## Site Screenshots
 Main page
-![alt text](<Screenshot 2024-06-27 122734.png>)
+![alt text](assets/css/images/Mainblogpage.png)
 
 Blog post page Light Mode
-![alt text](<Screenshot 2024-06-27 122943.png>)
+![alt text](assets/css/images/BlogPostPageLight.png)
 
 Blog post page Dark Mode
-![alt text](<Screenshot 2024-06-27 123001.png>)
+![alt text](assets/css/images/BlogPostPageDark.png)
 
 ## Credits
 Connor O'Halloran
