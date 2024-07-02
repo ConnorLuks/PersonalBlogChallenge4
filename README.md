@@ -5,7 +5,7 @@ My Blog Webite
 A two page website for personal blog post, set up for use of anyone, records and keeps posted comments. titles of the blog, and names of the poster.
 
 ## Issues
-No matter what I do I can not get the gitpages link to connect to the Blog Post Page, after filling in the information on the Main Page. The site works perfectly fine when opened from the Live Server in VSCode.
+Original issue with the JS not working has been fixed. site is fully functional now.
 
 ## Installation
 No Installing required, just follow the deployment links.
